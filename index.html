@@ -1,56 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Alex's Playground Story</title>
+  <!-- this will show on browser tab -->
+  <title>Alex's Playground Story - Home Page</title>
 </head>
 <body>
 
-  <!-- Site Header -->
-  <header>
-    <div style="display: flex; justify-content: space-between; align-items: flex-start; padding: 20px;">
-      <h1>Alex's Playground Story</h1>
+  <!-- this is our main header -->
+  <header style="display: flex; justify-content: space-between; align-items: flex-start; padding: 20px;">
+    <h1>Alex's Playground Story</h1>
 
-      <div>
-        <!-- Top Navigation -->
-        <nav>
-          <a href="index.html">Home</a> |
-          <a href="settings.html">Settings</a> |
-          <a href="about.html">About Us</a>
-        </nav>
+    <div>
+      <!-- this is navigation part -->
+      <nav>
+        <a href="index.html">Home</a> |
+        <a href="settings.html">Settings</a> |
+        <a href="about.html">About Us</a>
+      </nav>
 
-        <!-- Search Form -->
-        <form style="margin-top: 8px;">
-          <input type="text" placeholder="Search...">
-          <button type="submit">🔍</button>
-        </form>
-      </div>
+      <!-- this is our search bar -->
+      <form style="margin-top: 8px;">
+        <input type="text" placeholder="Search..." />
+        <button type="submit">🔍</button>
+      </form>
     </div>
   </header>
 
-  <!-- Story Introduction -->
-  <main style="text-align: center; margin: 100px auto;">
-    <p>Alex wandered into an abandoned playground... and something didn’t feel right.<br>What happens next is up to you.</p>
-    <button onclick="startGame()">Start Story</button>
+  <!-- this is the middle part of the page where user will see the story intro -->
+  <main style="text-align: center; margin-top: 100px;">
+    <!-- story intro line -->
+    <p>Alex is standing alone near an old playground... it's dark and silent. There is only one way to find out what happens next.</p>
+
+    <!-- only one button here to start the story -->
+    <button onclick="location.href='story1.html'">Start the Story</button>
   </main>
 
-  <!-- Community Section -->
-  <div style="position: fixed; bottom: 0; right: 0; width: 300px; height: 120px; border: 1px solid #000; display: flex; align-items: center; justify-content: center;">
-    <a href="#">Community and Discussions</a>
+  <!-- this is our community and discussion box at bottom right corner -->
+  <div style="position: fixed; bottom: 0; right: 0; width: 300px; height: 120px; border: 1px solid black; display: flex; align-items: center; justify-content: center; background-color: white;">
+    <a href="community.html" style="text-decoration: none; font-size: 16px; color: black;">Community and Discussions</a>
   </div>
 
-  <!-- Footer -->
+  <!-- this is footer part that goes bottom -->
   <footer style="text-align: center; position: absolute; bottom: 20px; width: 100%;">
-    <p>&copy; 2025 Alex’s Playground Story. All rights reserved.</p>
+    <p>&copy; 2025 Alex’s Playground Story. All Rights Reserved.</p>
   </footer>
-
-  <!-- Button Function -->
-  <script>
-    function startGame() {
-      window.location.href = "story1.html";
-    }
-  </script>
 
 </body>
 </html>
+
+
