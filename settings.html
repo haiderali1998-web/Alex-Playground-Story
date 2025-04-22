@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Settings</title>
+</head>
+<body>
+
+  <!-- Page title -->
+  <h1>Settings</h1>
+
+  <!-- Background Music Option -->
+  <label>
+    <input type="checkbox" id="musicToggle">
+    Play Background Music
+  </label>
+  <br><br>
+
+  <!-- Brightness Slider -->
+  <label for="brightness">Screen Brightness</label>
+  <input type="range" id="brightness" min="50" max="100">
+  <br><br>
+
+  <!-- Dark Mode Option -->
+  <label>
+    <input type="checkbox" id="darkModeToggle">
+    Enable Dark Mode
+  </label>
+  <br><br>
+
+  <!-- Back button to go home -->
+  <button onclick="location.href='index.html'">Back to Home</button>
+
+  <!-- Background music (just add your .mp3 file) -->
+  <audio id="bgMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+    Your browser does not support audio.
+  </audio>
+
+</body>
+</html>
+
+
+
+
