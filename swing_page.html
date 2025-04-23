@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <!--Link to styles.css for styling -->
+  <link rel="stylesheet" href="styles.css">
   <!-- Browser Tab -->
   <title>Alex's Playground Story - Page 2</title>
 </head>
-<body>
-
+<body class="swing-page">
   <!-- Main Header -->
-  <header style="display: flex; justify-content: space-between; align-items: flex-start; padding: 20px;">
+  <header>
     <h1>Alex's Playground Story</h1>
 
-    <div>
-      <!-- Navigation -->
-      <nav>
-        <a href="index.html">Home</a> |
-        <a href="settings.html">Settings</a> |
-        <a href="about.html">About Us</a>
-      </nav>
+    <div class="nav-links">
+      <a onclick="fadeToPage('Home.html')">Home</a>
+      
+	    <a onclick="fadeToPage('settings.html')">Settings</a>
+      
+	    <a onclick="fadeToPage('about.html')">About Us</a>
     </div>
   </header>
 
   <!-- Story information -->
-  <main style="text-align: center; margin-top: 200px;">
+  <main>
     <!-- Introduction to the page of the story -->
     <p>Alex moved carefully into the secluded area, approaching the swings with caution.</p>
     <p>They moved slightly on their own, making a creak with every swing, even though there was no wind. </p>
     <p>He hesitated to approach them, but then he gave one a push.</p>
-<div style="margin-top: 40px">
+<div>
     <p>Nothing happened at first, but then a shadowy figure came behind him suddenly, just out of sight.</p>
     <p>Alex was starting to feel uneasy; he stepped back and looked toward the slide, wanting to investigate further.</p>
 </div>
@@ -34,18 +34,32 @@
     <p>What will Alex do?</p>
 
     <!-- Next page goes to the slide -->
-    <button onclick="location.href='slide_page.html'">Approach the slide with caution</button>
+    <button onclick="fadeToPage('swing_page.html')">Approach the slide with caution</button>
   </main>
 
   <!-- Community and Discussions on the bottom right corner -->
-  <div style="position: fixed; bottom: 0; right: 0; width: 300px; height: 120px; border: 1px solid black; display: flex; align-items: center; justify-content: center; background-color: white;">
-    <a href="community.html" style="text-decoration: none; font-size: 16px; color: black;">Community and Discussions</a>
+  <div id="community-box">
+    <a href="community.html">Community and Discussions</a>
   </div>
 
   <!-- The footer -->
-  <footer style="text-align: center; position: absolute; bottom: 20px; width: 100%;">
-    <p>&copy; 2025 Alex’s Playground Story. All Rights Reserved.</p>
+  <footer>
+    <p>&copy; 2025 Alex's Playground Story. All Rights Reserved.</p>
   </footer>
 
+  <!-- Fucntion to pass in fade in link parameter and fade into next page-->
+  <script>
+    function fadeToPage(url) {
+      document.body.classList.add('fading-out');
+      setTimeout(() => {
+        window.location.href = url;
+      }, 1000);
+    }
+    window.addEventListener('load', () => {
+      document.body.classList.remove('fading-out');
+      document.body.style.opacity = '1';
+      document.body.style.animation = 'fadeIn 1s ease-in';
+    });
+  </script>
 </body>
 </html>

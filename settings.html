@@ -1,45 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Links to external stylesheet for styling -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Sets character encoding to UTF-8 -->
   <meta charset="UTF-8">
+  <!-- Page title displayed in browser tab -->
   <title>Settings</title>
 </head>
-<body>
-
-  <!-- Page title -->
-  <h1>Settings</h1>
-
-  <!-- Background Music Option -->
-  <label>
-    <input type="checkbox" id="musicToggle">
-    Play Background Music
-  </label>
-  <br><br>
-
-  <!-- Brightness Slider -->
-  <label for="brightness">Screen Brightness</label>
-  <input type="range" id="brightness" min="50" max="100">
-  <br><br>
-
-  <!-- Dark Mode Option -->
-  <label>
-    <input type="checkbox" id="darkModeToggle">
-    Enable Dark Mode
-  </label>
-  <br><br>
-
-  <!-- Back button to go home -->
-  <button onclick="location.href='index.html'">Back to Home</button>
-
-  <!-- Background music (just add your .mp3 file) -->
+<body class="settings-page">
+  <header>
+    <!-- Main heading for the settings page -->
+    <h1>Settings</h1>
+    <div class="nav-links">
+      <!-- Navigation links with fade transition effect -->
+      <a onclick="fadeToPage('Home.html')">Home</a>
+      <a onclick="fadeToPage('settings.html')">Settings</a>
+      <a onclick="fadeToPage('about.html')">About Us</a>
+    </div>
+  </header>
+  <main class="settings-controls">
+    <!-- Checkbox to toggle background music -->
+    <label>
+      <input type="checkbox" id="musicToggle">
+      Play Background Music
+    </label>
+    <br><br>
+    <!-- Slider to adjust screen brightness -->
+    <label for="brightness">Screen Brightness</label>
+    <input type="range" id="brightness" min="50" max="100">
+    <br><br>
+    <!-- Checkbox to toggle dark mode -->
+    <label>
+      <input type="checkbox" id="darkModeToggle">
+      Enable Dark Mode
+    </label>
+    <br><br>
+    <!-- Button to return to home page with fade effect -->
+    <button onclick="fadeToPage('Home.html')">Back to Home</button>
+  </main>
+  <!-- Audio element for background music -->
   <audio id="bgMusic" loop>
     <source src="music.mp3" type="audio/mpeg">
     Your browser does not support audio.
   </audio>
-
+  <script>
+    // Function to handle page transitions with fade-out effect
+    function fadeToPage(url) {
+      document.body.classList.add('fading-out');
+      setTimeout(() => {
+        window.location.href = url;
+      }, 1000);
+    }
+    // Event listener to handle page load with fade-in effect
+    window.addEventListener('load', () => {
+      document.body.classList.remove('fading-out');
+      document.body.style.opacity = '1';
+      document.body.style.animation = 'fadeIn 1s ease-in';
+    });
+  </script>
+  <!-- Cloudflare challenge script for security (auto-generated) -->
+  <script>
+    (function(){
+      function c(){
+        var b = a.contentDocument || a.contentWindow.document;
+        if(b){
+          var d = b.createElement('script');
+          d.innerHTML = "window.__CF$cv$params={r:'934fb5913fbd44f1',t:'MTc0NTQzNTkzMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
+          b.getElementsByTagName('head')[0].appendChild(d);
+        }
+      }
+      if(document.body){
+        var a = document.createElement('iframe');
+        a.height=1;
+        a.width=1;
+        a.style.position='absolute';
+        a.style.top=0;
+        a.style.left=0;
+        a.style.border='none';
+        a.style.visibility='hidden';
+        document.body.appendChild(a);
+        if('loading'!==document.readyState) c();
+        else if(window.addEventListener) document.addEventListener('DOMContentLoaded',c);
+        else {
+          var e = document.onreadystatechange || function(){};
+          document.onreadystatechange = function(b){
+            e(b);
+            'loading'!==document.readyState && (document.onreadystatechange = e, c());
+          }
+        }
+      }
+    })();
+  </script>
 </body>
 </html>
-
-
-
-
