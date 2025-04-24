@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!--Link to styles.css for styling -->
+  <!-- Link to styles.css for styling -->
   <link rel="stylesheet" href="styles.css">
   <!-- Browser Tab -->
   <title>Alex's Playground Story - Page 1</title>
@@ -10,57 +10,33 @@
   <!-- Main Header -->
   <header>
     <h1>Alex's Playground Story</h1>
-
-     <!-- This is the menu with links -->
-     <div class="nav-links">
-      <a onclick="fadeToPage('Home.html')">Home</a>
-      
-	    <a onclick="fadeToPage('settings.html')">Settings</a>
-      
-	    <a onclick="fadeToPage('about.html')">About Us</a>
+    <!-- Menu with navigation links -->
+    <div class="nav-links">
+      <a onclick="fadeToPage('Home.html')" aria-label="Go to Home page">Home</a>
+      <a onclick="fadeToPage('settings.html')" aria-label="Go to Settings page">Settings</a>
+      <a onclick="fadeToPage('about.html')" aria-label="Go to About Us page">About Us</a>
     </div>
   </header>
-
-  <!-- Story information -->
-  <main>
+  <!-- Story content -->
+  <main class="main-story">
     <!-- Introduction to the page of the story -->
     <p>It was late that one evening when Alex wandered into the old, abandoned playground.</p>
     <p>The rusty swings in the distance creaked in the wind as Alex observed them, and the slide stood tall like a silent watchtower looming over him.</p>
     <p>Alex shivered as he felt that something was off, but his curiosity got the better of him.</p>
-    
-    <!-- Giving an option to the user for the next page -->
+    <!-- Prompt for user choice -->
     <p>Will Alex approach the swings?</p>
-    
-    <!-- Next page goes to the swings -->
-    <button onclick="fadeToPage('swing_page.html')">Approach the swings with caution</button>
+    <!-- Button to progress to swings page -->
+    <button onclick="fadeToPage('swing_page.html')" aria-label="Approach the swings">Approach the swings with caution</button>
   </main>
-
-  <!-- Community and Discussions on the bottom right corner -->
+  <!-- Community and Discussions box -->
   <div id="community-box">
-    <a href="community.html">Community and Discussions</a>
+    <a href="community.html" aria-label="Go to Community and Discussions">Community and Discussions</a>
   </div>
-
-  <!-- The footer -->
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Alex's Playground Story. All Rights Reserved.</p>
   </footer>
-
-  <!-- Fucntion to pass in fade in link parameter and fade into next page-->
-  <script>
-    function fadeToPage(url) {
-      document.body.classList.add('fading-out');
-      setTimeout(() => {
-        window.location.href = url;
-      }, 1000);
-    }
-    window.addEventListener('load', () => {
-      document.body.classList.remove('fading-out');
-      document.body.style.opacity = '1';
-      document.body.style.animation = 'fadeIn 1s ease-in';
-    });
-  </script>
-
+  <!-- Shared JavaScript for transitions and settings -->
+  <script src="scripts.js"></script>
 </body>
 </html>
-
-

@@ -14,50 +14,37 @@
     <h1>Settings</h1>
     <div class="nav-links">
       <!-- Navigation links with fade transition effect -->
-      <a onclick="fadeToPage('Home.html')">Home</a>
-      <a onclick="fadeToPage('settings.html')">Settings</a>
-      <a onclick="fadeToPage('about.html')">About Us</a>
+      <a onclick="fadeToPage('Home.html')" aria-label="Go to Home page">Home</a>
+      <a onclick="fadeToPage('settings.html')" aria-label="Go to Settings page">Settings</a>
+      <a onclick="fadeToPage('about.html')" aria-label="Go to About Us page">About Us</a>
     </div>
   </header>
   <main class="settings-controls">
-    <!-- Checkbox to toggle background music -->
+    <!-- Slider to adjust screen brightness (first option) -->
+    <label for="brightness">Screen Brightness</label>
+    <input type="range" id="brightness" min="50" max="100" aria-label="Adjust screen brightness">
+    <br><br>
+    <!-- Checkbox to toggle background music (not implemented) -->
     <label>
-      <input type="checkbox" id="musicToggle">
+      <input type="checkbox" id="musicToggle" aria-label="Toggle background music">
       Play Background Music
     </label>
     <br><br>
-    <!-- Slider to adjust screen brightness -->
-    <label for="brightness">Screen Brightness</label>
-    <input type="range" id="brightness" min="50" max="100">
-    <br><br>
     <!-- Checkbox to toggle dark mode -->
     <label>
-      <input type="checkbox" id="darkModeToggle">
+      <input type="checkbox" id="darkModeToggle" aria-label="Toggle dark mode">
       Enable Dark Mode
     </label>
     <br><br>
     <!-- Button to return to home page with fade effect -->
-    <button onclick="fadeToPage('Home.html')">Back to Home</button>
+    <button onclick="fadeToPage('Home.html')" aria-label="Return to Home page">Back to Home</button>
   </main>
-  <!-- Audio element for background music -->
+  <!-- Audio element for background music (not implemented) -->
   <audio id="bgMusic" loop>
     <source src="music.mp3" type="audio/mpeg">
     Your browser does not support audio.
   </audio>
-  <script>
-    // Function to handle page transitions with fade-out effect
-    function fadeToPage(url) {
-      document.body.classList.add('fading-out');
-      setTimeout(() => {
-        window.location.href = url;
-      }, 1000);
-    }
-    // Event listener to handle page load with fade-in effect
-    window.addEventListener('load', () => {
-      document.body.classList.remove('fading-out');
-      document.body.style.opacity = '1';
-      document.body.style.animation = 'fadeIn 1s ease-in';
-    });
-  </script>
+  <!-- Shared JavaScript for transitions and settings -->
+  <script src="scripts.js"></script>
 </body>
 </html>

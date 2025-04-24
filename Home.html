@@ -1,55 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <!--Link to styles.css for styling -->
-   <link rel="stylesheet" href="styles.css">
+  <!-- Link to styles.css for styling -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Browser Tab -->
   <title>Alex's Playground Story - Home</title>
 </head>
 <body class="home-page">
-
-  <!-- This is the top area with the logo on the left and menu on right -->
-  <div class="top-bar">
+  <!-- Main Header -->
+  <header>
     <h1>Alex's Playground Story</h1>
-
-    <!-- This is the menu with links -->
+    <!-- Menu with navigation links -->
     <div class="nav-links">
-      <a onclick="fadeToPage('Home.html')">Home</a>
-      
-	    <a onclick="fadeToPage('settings.html')">Settings</a>
-      
-	    <a onclick="fadeToPage('about.html')">About Us</a>
+      <a onclick="fadeToPage('Home.html')" aria-label="Go to Home page">Home</a>
+      <a onclick="fadeToPage('settings.html')" aria-label="Go to Settings page">Settings</a>
+      <a onclick="fadeToPage('about.html')" aria-label="Go to About Us page">About Us</a>
     </div>
-  </div>
-
-  <!-- This is the main story intro and start button in the middle -->
-  <div class="main-content">
+  </header>
+  <!-- Main content -->
+  <main class="main-story">
     <p>Alex is standing alone near an old playground... It's very quiet. What happens next is up to you.</p>
-    <button onclick="fadeToPage('first_story_page.html')">Start the Story</button>
-  </div>
-  <!-- This is the box that stays at the bottom right -->
+    <button onclick="fadeToPage('first_story_page.html')" aria-label="Start the story">Start the Story</button>
+  </main>
+  <!-- Community and Discussions box -->
   <div id="community-box">
-    <a href="community.html">Community and Discussions</a>
+    <a onclick="fadeToPage('community.html')" aria-label="Go to Community and Discussions">Community and Discussions</a>
   </div>
-
-   <!-- The footer -->
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Alex's Playground Story. All Rights Reserved.</p>
   </footer>
-
-  <!-- Fucntion to pass in fade in link parameter and fade into next page-->
-  <script>
-    function fadeToPage(url) {
-      document.body.classList.add('fading-out');
-      setTimeout(() => {
-        window.location.href = url;
-      }, 1000);
-    }
-    window.addEventListener('load', () => {
-      document.body.classList.remove('fading-out');
-      document.body.style.opacity = '1';
-      document.body.style.animation = 'fadeIn 1s ease-in';
-    });
-  </script>
-
+  <!-- Shared JavaScript for transitions and settings -->
+  <script src="scripts.js"></script>
 </body>
 </html>

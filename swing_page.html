@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!--Link to styles.css for styling -->
+  <!-- Link to styles.css for styling -->
   <link rel="stylesheet" href="styles.css">
   <!-- Browser Tab -->
   <title>Alex's Playground Story - Page 2</title>
@@ -10,56 +10,37 @@
   <!-- Main Header -->
   <header>
     <h1>Alex's Playground Story</h1>
-
+    <!-- Menu with navigation links -->
     <div class="nav-links">
-      <a onclick="fadeToPage('Home.html')">Home</a>
-      
-	    <a onclick="fadeToPage('settings.html')">Settings</a>
-      
-	    <a onclick="fadeToPage('about.html')">About Us</a>
+      <a onclick="fadeToPage('Home.html')" aria-label="Go to Home page">Home</a>
+      <a onclick="fadeToPage('settings.html')" aria-label="Go to Settings page">Settings</a>
+      <a onclick="fadeToPage('about.html')" aria-label="Go to About Us page">About Us</a>
     </div>
   </header>
-
-  <!-- Story information -->
-  <main>
-    <!-- Introduction to the page of the story -->
+  <!-- Story content -->
+  <main class="main-story">
+    <!-- Story progression -->
     <p>Alex moved carefully into the secluded area, approaching the swings with caution.</p>
-    <p>They moved slightly on their own, making a creak with every swing, even though there was no wind. </p>
+    <p>They moved slightly on their own, making a creak with every swing, even though there was no wind.</p>
     <p>He hesitated to approach them, but then he gave one a push.</p>
-<div>
-    <p>Nothing happened at first, but then a shadowy figure came behind him suddenly, just out of sight.</p>
-    <p>Alex was starting to feel uneasy; he stepped back and looked toward the slide, wanting to investigate further.</p>
-</div>
-    <!-- Giving an option to the user for the next page -->
+    <div>
+      <p>Nothing happened at first, but then a shadowy figure came behind him suddenly, just out of sight.</p>
+      <p>Alex was starting to feel uneasy; he stepped back and looked toward the slide, wanting to investigate further.</p>
+    </div>
+    <!-- Prompt for user choice -->
     <p>What will Alex do?</p>
-
-    <!-- Next page goes to the slide -->
-    <button onclick="fadeToPage('swing_page.html')">Approach the slide with caution</button>
+    <!-- Button to progress to slide page -->
+    <button onclick="fadeToPage('slide_page.html')" aria-label="Approach the slide">Approach the slide with caution</button>
   </main>
-
-  <!-- Community and Discussions on the bottom right corner -->
+  <!-- Community and Discussions box -->
   <div id="community-box">
-    <a href="community.html">Community and Discussions</a>
+    <a href="community.html" aria-label="Go to Community and Discussions">Community and Discussions</a>
   </div>
-
-  <!-- The footer -->
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Alex's Playground Story. All Rights Reserved.</p>
   </footer>
-
-  <!-- Fucntion to pass in fade in link parameter and fade into next page-->
-  <script>
-    function fadeToPage(url) {
-      document.body.classList.add('fading-out');
-      setTimeout(() => {
-        window.location.href = url;
-      }, 1000);
-    }
-    window.addEventListener('load', () => {
-      document.body.classList.remove('fading-out');
-      document.body.style.opacity = '1';
-      document.body.style.animation = 'fadeIn 1s ease-in';
-    });
-  </script>
+  <!-- Shared JavaScript for transitions and settings -->
+  <script src="scripts.js"></script>
 </body>
 </html>
