@@ -2,19 +2,33 @@
 <html>
 <head>
   <link rel="stylesheet" href="styles.css">
-  <title>You Died - Alex's Playground Story</title>
+  <title>The Slide - Alex's Playground Story</title>
 </head>
-<body class="death-page">
+<body class="slide-page">
 
-  <div class="main-content" style="text-align: center; padding-top: 100px;">
-    <h1 style="font-size: 48px; color: darkred;">You Died</h1>
-    <p style="font-size: 20px;">Alex's journey ends here... but you can always try again.</p>
-
-    <div style="margin-top: 40px;">
-      <button onclick="fadeToPage('first_story_page.html')" style="margin-right: 20px;">Start Again</button>
-      <button onclick="fadeToPage('Home.html')">Home Page</button>
+  <header>
+    <h1>Alex's Playground Story</h1>
+    <div class="nav-links">
+      <a onclick="fadeToPage('Home.html')">Home</a>
+      <a onclick="fadeToPage('settings.html')">Settings</a>
+      <a onclick="fadeToPage('about.html')">About Us</a>
     </div>
-  </div>
+  </header>
 
+  <main class="main-story">
+    <p>Alex stepped closer to the slide. It stood tall, quiet, and still in the dark playground.</p>
+    <p>He slowly climbed up, gripping the cold metal rails. A cold breeze hit him as he reached the top.</p>
+    <p>He could slide down... or go back to the swings.</p>
+
+    <button onclick="fadeToPage('dark_void.html')">Slide Down</button>
+    <button onclick="fadeToPage('swing_page.html')">Go Back to the Swings</button>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Alex's Playground Story. All Rights Reserved.</p>
+  </footer>
+
+  <script src="scripts.js"></script>
 </body>
 </html>
+
