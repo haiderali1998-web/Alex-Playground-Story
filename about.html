@@ -6,22 +6,42 @@
 </head>
 <body class="about-page">
 
-  <div class="top-bar">
-    <h1>About Us</h1>
-    <div class="nav-links">
-      <a onclick="fadeToPage('Home.html')">Home</a>
-      <a onclick="fadeToPage('settings.html')">Settings</a>
-      <a onclick="fadeToPage('community.html')">Community</a>
+    <div class="top-bar">
+        <h1>About Us</h1>
+        <div class="nav-links">
+            <a onclick="fadeToPage('loading.html')">Home</a>
+            <a onclick="fadeToPage('settings.html')">Settings</a>
+            <a onclick="fadeToPage('community.html')">Community</a>
+            <a onclick="fadeToPage('quiz.html')" aria-label="Go to Quiz page">Quiz</a>
+            <a onclick="fadeToPage('credits.html')" aria-label="Go to Credits page">Credits</a>
+        </div>
     </div>
-  </div>
 
-  <div class="main-content">
-    <p>Alex's Story is an interactive horror experience where your choices shape the outcome. 
-       Every decision Alex makes could save his life—or lead him deeper into danger. 
-       The story unfolds across mysterious environments, hidden clues, and chilling encounters.</p>
-    <p>Created by a small team passionate about storytelling, we invite you to explore, 
-       choose wisely, and uncover the truth behind Alex's haunting journey.</p>
-  </div>
+    <div class="main-content">
+        <p>
+            Alex's Story is an interactive horror experience where your choices shape the outcome.
+            Every decision Alex makes could save his life—or lead him deeper into danger.
+            The story unfolds across mysterious environments, hidden clues, and chilling encounters.
+        </p>
+        <p>
+            Created by a small team passionate about storytelling, we invite you to explore,
+            choose wisely, and uncover the truth behind Alex's haunting journey.
+        </p>
+    </div>
+
+
+
+
+
+    <!-- Background Music -->
+    <audio id="bgMusic" src="sound/creepy_loop.mp3" loop preload="auto"></audio>
+
+    <!-- Button Creak Sound -->
+    <audio id="creakSound" src="sound/creaky_door.mp3" preload="auto"></audio>
+
+    <!-- Shared JavaScript -->
+    <script src="scripts.js"></script>
+
 
 </body>
 </html>

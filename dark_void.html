@@ -1,38 +1,59 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <!-- Browser Tab -->
-        <title>Alex's Playground Story - Page 4</title>
-    </head>
-    <body>
-        <!-- Main Header -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alex's Playground Story - Page 4</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page-4">
+    <!-- Mist effect -->
+    <div class="mist"></div>
+
+    <!-- Main Header -->
+    <header>
         <h1>Alex's Playground Story</h1>
-
-        <nav>
-            <!-- Navigation -->
-            <a href="index.html">Home</a>
-            <a href="settings.html">Settings</a>
-            <a href="about.html">About Us</a>
+        <nav class="nav-links">
+            <a onclick="fadeToPage('loading.html')" aria-label="Go to Home page">Home</a>
+            <a onclick="fadeToPage('settings.html')" aria-label="Go to Settings page">Settings</a>
+            <a onclick="fadeToPage('about.html')" aria-label="Go to About Us page">About Us</a>
+            <a onclick="fadeToPage('quiz.html')" aria-label="Go to Quiz page">Quiz</a>
+            <a onclick="fadeToPage('credits.html')" aria-label="Go to Credits page">Credits</a>
         </nav>
+    </header>
 
-    <!-- Story information -->
-    <!-- Introduction to the page of the story -->
-    <p>Alex landed hard on a wooden floor. He was aware of the new surroundings; 
-        he wasn't in the playground anymore. Instead he was inside a dimly lit eerie house.</p>
-    <p>The air was dry around him, the walls were covered in scratches and mysterious stains.
-        A door in his sight creaked open on it's own. Alex, now scared, had two choices to make.</p>
-    
-        <!-- Giving an option to the user for the next page -->
-    <p>Will Alex go upstairs, or will he go down to the basement?</p>
+    <!-- Story content -->
+    <main class="main-story">
+        <p>Alex landed hard on a wooden floor. He was aware of the new surroundings; he wasn't in the playground anymore. Instead, he was inside a dimly lit eerie house.</p>
+        <p>The air was dry around him, the walls were covered in scratches and mysterious stains. A door in his sight creaked open on its own. Alex, now scared, had two choices to make.</p>
+        <p>Will Alex go upstairs, or will he go down to the basement?</p>
 
-    <!-- Next page goes to either upstairs or the basement -->
-    <button onclick="location.href='upstairs.html'">Go up the stairs</button>
-    <button onclick="location.href='basement.html'">Go down to the basement</button>
+        <button onclick="fadeToPage('upstairs.html')">Go up the stairs</button>
+        <button onclick="fadeToPage('basement.html')">Go down to the basement</button>
+    </main>
 
-    <!-- Community and Discussions on the bottom right corner -->
-    <a href="community.html">Community and Discussions</a>
-    
-    <!-- The footer -->
-    <p>&copy; 2025 Alex's Playground Story</p>
+    <!-- Community and Discussions -->
+    <div id="community-box">
+        <a onclick="fadeToPage('community.html')" aria-label="Go to Community and Discussions">Community and Discussions</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Alex's Playground Story. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Background Music -->
+    <audio id="bgMusic" src="sound/creepy_loop.mp3" loop preload="auto"></audio>
+
+    <!-- Button Creak Sound -->
+    <audio id="creakSound" src="sound/creaky_door.mp3" preload="auto"></audio>
+
+    <!-- Shared JavaScript -->
+    <script src="scripts.js"></script>
 </body>
+</html>
+
+
+
+
+    </body>
 </html>

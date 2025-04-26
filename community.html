@@ -6,23 +6,42 @@
 </head>
 <body class="community-page">
 
-  <div class="top-bar">
-    <h1>Community</h1>
-    <div class="nav-links">
-      <a onclick="fadeToPage('Home.html')">Home</a>
-      <a onclick="fadeToPage('settings.html')">Settings</a>
-      <a onclick="fadeToPage('about.html')">About Us</a>
+    <div class="top-bar">
+        <h1>Community</h1>
+        <div class="nav-links">
+            <a onclick="fadeToPage('loading.html')">Home</a>
+            <a onclick="fadeToPage('settings.html')">Settings</a>
+            <a onclick="fadeToPage('about.html')">About Us</a>
+            <a onclick="fadeToPage('quiz.html')" aria-label="Go to Quiz page">Quiz</a>
+            <a onclick="fadeToPage('credits.html')" aria-label="Go to Credits page">Credits</a>
+        </div>
     </div>
-  </div>
 
-  <div class="main-content">
-    <p>Horror games thrive on tension, atmosphere, and the fear of the unknown. 
-       They're built around player choices, eerie environments, and the constant question: 
-       “What’s waiting around the corner?”</p>
-    <p>This space is where our players share theories, reactions, and ideas. 
-       Whether you’ve uncovered a secret or want to talk about your favorite twist, 
-       your voice helps shape the future of Alex's story.</p>
-  </div>
+    <div class="main-content">
+        <p>
+            Horror games thrive on tension, atmosphere, and the fear of the unknown.
+            They're built around player choices, eerie environments, and the constant question:
+            “What’s waiting around the corner?”
+        </p>
+        <p>
+            This space is where our players share theories, reactions, and ideas.
+            Whether you’ve uncovered a secret or want to talk about your favorite twist,
+            your voice helps shape the future of Alex's story.
+        </p>
+    </div>
+
+
+
+    <!-- Background Music -->
+    <audio id="bgMusic" src="sound/creepy_loop.mp3" loop preload="auto"></audio>
+
+    <!-- Button Creak Sound -->
+    <audio id="creakSound" src="sound/creaky_door.mp3" preload="auto"></audio>
+
+    <!-- Shared JavaScript -->
+    <script src="scripts.js"></script>
+
+
 
 </body>
 </html>

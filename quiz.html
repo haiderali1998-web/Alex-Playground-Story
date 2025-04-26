@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz - Alex's Playground Story</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="quiz-page">
+    <header>
+        <h1>Quiz: Test Your Knowledge!</h1>
+        <div class="nav-links">
+            <a onclick="fadeToPage('index.html')" aria-label="Go to Home page">Home</a>
+            <a onclick="fadeToPage('settings.html')" aria-label="Go to Settings page">Settings</a>
+            <a onclick="fadeToPage('about.html')" aria-label="Go to About Us page">About Us</a>
+            <a onclick="fadeToPage('credits.html')" aria-label="Go to Credits page">Credits</a>
+        </div>
+    </header>
+
+    <main class="main-story">
+        <form id="quizForm">
+
+            <p>1. Where did Alex go late one evening?</p>
+            <label><input type="radio" name="q1" value="a"> A. School</label><br>
+            <label><input type="radio" name="q1" value="b"> B. Playground</label><br>
+            <label><input type="radio" name="q1" value="c"> C. Forest</label><br><br>
+
+            <p>2. What did Alex push at the playground?</p>
+            <label><input type="radio" name="q2" value="a"> A. A merry-go-round</label><br>
+            <label><input type="radio" name="q2" value="b"> B. A swing</label><br>
+            <label><input type="radio" name="q2" value="c"> C. A slide</label><br><br>
+
+            <p>3. What chased Alex?</p>
+            <label><input type="radio" name="q3" value="a"> A. A shadowy figure</label><br>
+            <label><input type="radio" name="q3" value="b"> B. A wild animal</label><br>
+            <label><input type="radio" name="q3" value="c"> C. A stranger</label><br><br>
+
+            <button type="button" onclick="submitQuiz()">Submit Quiz</button>
+
+        </form>
+
+        <div id="quizResult" style="margin-top: 20px; font-size: 1.5em;"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Alex's Playground Story. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Background Music -->
+    <audio id="bgMusic" src="sound/creepy_loop.mp3" loop preload="auto"></audio>
+
+    <!-- Button Creak Sound -->
+    <audio id="creakSound" src="sound/creaky_door.mp3" preload="auto"></audio>
+
+    <!-- Shared JavaScript -->
+    <script src="scripts.js"></script>
+
+    <!-- Quiz Logic -->
+    <script>
+    function submitQuiz() {
+      let score = 0;
+
+      const answers = {
+        q1: 'b',
+        q2: 'b',
+        q3: 'a'
+      };
+
+      const form = document.forms['quizForm'];
+
+      if (form['q1'].value === answers.q1) score++;
+      if (form['q2'].value === answers.q2) score++;
+      if (form['q3'].value === answers.q3) score++;
+
+      document.getElementById('quizResult').innerText = `You got ${score} out of 3 correct!`;
+    }
+    </script>
+
+</body>
+</html>

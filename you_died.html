@@ -1,34 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="styles.css">
-  <title>The Slide - Alex's Playground Story</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>The Slide - Alex's Playground Story</title>
 </head>
 <body class="slide-page">
 
-  <header>
-    <h1>Alex's Playground Story</h1>
-    <div class="nav-links">
-      <a onclick="fadeToPage('Home.html')">Home</a>
-      <a onclick="fadeToPage('settings.html')">Settings</a>
-      <a onclick="fadeToPage('about.html')">About Us</a>
-    </div>
-  </header>
+    <header>
+        <h1>Alex's Playground Story</h1>
+        <div class="nav-links">
+            <a onclick="fadeToPage('loading.html')"
+            <a onclick="fadeToPage('settings.html')">Settings</a>
+            <a onclick="fadeToPage('about.html')">About Us</a>
+            <a onclick="fadeToPage('quiz.html')" aria-label="Go to Quiz page">Quiz</a>
+            <a onclick="fadeToPage('credits.html')" aria-label="Go to Credits page">Credits</a>
+        </div>
+    </header>
 
-  <main class="main-story">
-    <p>Alex stepped closer to the slide. It stood tall, quiet, and still in the dark playground.</p>
-    <p>He slowly climbed up, gripping the cold metal rails. A cold breeze hit him as he reached the top.</p>
-    <p>He could slide down... or go back to the swings.</p>
+    <main class="main-story">
+        <p>Alex stepped closer to the slide. It stood tall, quiet, and still in the dark playground.</p>
+        <p>He slowly climbed up, gripping the cold metal rails. A cold breeze hit him as he reached the top.</p>
+        <p>He could slide down... or go back to the swings.</p>
 
-    <button onclick="fadeToPage('dark_void.html')">Slide Down</button>
-    <button onclick="fadeToPage('swing_page.html')">Go Back to the Swings</button>
-  </main>
+        <button onclick="fadeToPage('dark_void.html')">Slide Down</button>
+        <button onclick="fadeToPage('swing_page.html')">Go Back to the Swings</button>
+    </main>
 
-  <footer>
-    <p>&copy; 2025 Alex's Playground Story. All Rights Reserved.</p>
-  </footer>
+    <footer>
+        <p>&copy; 2025 Alex's Playground Story. All Rights Reserved.</p>
+    </footer>
 
-  <script src="scripts.js"></script>
+    <!-- Background Music -->
+    <audio id="bgMusic" src="sound/creepy_loop.mp3" loop preload="auto"></audio>
+
+    <!-- Button Creak Sound -->
+    <audio id="creakSound" src="sound/creaky_door.mp3" preload="auto"></audio>
+
+    <!-- Shared JavaScript for transitions and settings -->
+    <script src="scripts.js"></script>
+
 </body>
 </html>
 

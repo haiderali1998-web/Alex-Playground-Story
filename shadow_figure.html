@@ -10,31 +10,51 @@
 
         <nav>
             <!-- Navigation -->
-            <a href="index.html">Home</a>
+            <a href="loading.html">Home</a>
             <a href="settings.html">Settings</a>
             <a href="about.html">About Us</a>
+            <a onclick="fadeToPage('quiz.html')" aria-label="Go to Quiz page">Quiz</a>
+            <a onclick="fadeToPage('credits.html')" aria-label="Go to Credits page">Credits</a>
         </nav>
 
-    <!-- Story information -->
-    <!-- Introduction to the page of the story -->
-     <p>Alex turned around carefully at the low noise of the shadowy figure behind him.</p>
-     <p>Alex panicked and kicked the shadow which made the shadow stumble backwards, away from Alex.</p>
-     <p>Alex ran as fast as he could back towards the comfort of his own home, where he knew he would be safe
-        from what is lingering in the mysterious playground.</p>
+        <!-- Story information -->
+        <!-- Introduction to the page of the story -->
+        <p>Alex turned around carefully at the low noise of the shadowy figure behind him.</p>
+        <p>Alex panicked and kicked the shadow which made the shadow stumble backwards, away from Alex.</p>
+        <p>
+            Alex ran as fast as he could back towards the comfort of his own home, where he knew he would be safe
+            from what is lingering in the mysterious playground.
+        </p>
 
-    <!-- Giving an option to the user for the next page -->
-    <p> Congratulations! You've won the game. Would you like to go back to replay the story?</p>
+        <!-- Giving an option to the user for the next page -->
+        <p> Congratulations! You've won the game. Would you like to go back to replay the story?</p>
 
-    <!-- Next page goes to either the first story page or the home page -->
-    <button onclick="location.href='first_story_page.html'">Yes, I'd like to replay the story.</button>
-    <button onclick="location.href='home.html'">No, take me back home.</button>
+        <!-- Next page goes to either the first story page or the home page -->
+        <button onclick="location.href='first_story_page.html'">Yes, I'd like to replay the story.</button>
+        <button onclick="location.href='index.html'">No, take me back home.</button>
 
-    <!-- Community and Discussions on the bottom right corner -->
-    <a href="community.html">Community and Discussions</a>
-    
-    <!-- The footer -->
-    <p>&copy; 2025 Alex's Playground Story</p>
-</body>
+        <!-- Community and Discussions on the bottom right corner -->
+        <a href="community.html">Community and Discussions</a>
+
+        <!-- The footer -->
+        <p>&copy; 2025 Alex's Playground Story</p>
+
+
+
+
+
+        <!-- Background Music -->
+        <audio id="bgMusic" src="sound/creepy_loop.mp3" loop preload="auto"></audio>
+
+        <!-- Button Creak Sound -->
+        <audio id="creakSound" src="sound/creaky_door.mp3" preload="auto"></audio>
+
+        <!-- Shared JavaScript -->
+        <script src="scripts.js"></script>
+
+
+
+    </body>
 </html>
 
 

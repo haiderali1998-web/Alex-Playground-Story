@@ -1,50 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Links to external stylesheet for styling -->
-  <link rel="stylesheet" href="styles.css">
-  <!-- Sets character encoding to UTF-8 -->
-  <meta charset="UTF-8">
-  <!-- Page title displayed in browser tab -->
-  <title>Settings</title>
+    <link rel="stylesheet" href="styles.css">
+     <meta charset="UTF-8">
+    <title>Settings</title>
+
 </head>
+
 <body class="settings-page">
-  <header>
-    <!-- Main heading for the settings page -->
-    <h1>Settings</h1>
-    <div class="nav-links">
-      <!-- Navigation links with fade transition effect -->
-      <a onclick="fadeToPage('Home.html')" aria-label="Go to Home page">Home</a>
-      <a onclick="fadeToPage('settings.html')" aria-label="Go to Settings page">Settings</a>
-      <a onclick="fadeToPage('about.html')" aria-label="Go to About Us page">About Us</a>
-    </div>
-  </header>
-  <main class="settings-controls">
-    <!-- Slider to adjust screen brightness (first option) -->
-    <label for="brightness">Screen Brightness</label>
-    <input type="range" id="brightness" min="50" max="100" aria-label="Adjust screen brightness">
-    <br><br>
-    <!-- Checkbox to toggle background music (not implemented) -->
-    <label>
-      <input type="checkbox" id="musicToggle" aria-label="Toggle background music">
-      Play Background Music
-    </label>
-    <br><br>
-    <!-- Checkbox to toggle dark mode -->
-    <label>
-      <input type="checkbox" id="darkModeToggle" aria-label="Toggle dark mode">
-      Enable Dark Mode
-    </label>
-    <br><br>
-    <!-- Button to return to home page with fade effect -->
-    <button onclick="fadeToPage('Home.html')" aria-label="Return to Home page">Back to Home</button>
-  </main>
-  <!-- Audio element for background music (not implemented) -->
-  <audio id="bgMusic" loop>
-    <source src="music.mp3" type="audio/mpeg">
-    Your browser does not support audio.
-  </audio>
-  <!-- Shared JavaScript for transitions and settings -->
-  <script src="scripts.js"></script>
+    <header>
+        <!--  heading for settings page -->
+        <h1>Settings</h1>
+        <div class="nav-links">
+            <!-- Navigation links with fade transition effect -->
+            <a onclick="fadeToPage('loading.html')" aria-label="Go to Home page">Home</a>
+            <a onclick="fadeToPage('settings.html')" aria-label="Go to Settings page">Settings</a>
+            <a onclick="fadeToPage('quiz.html')" aria-label="Go to Quiz page">Quiz</a>
+            <a onclick="fadeToPage('about.html')" aria-label="Go to About Us page">About Us</a>
+            <a onclick="fadeToPage('credits.html')" aria-label="Go to Credits page">Credits</a>
+        </div>
+    </header>
+    <main class="settings-controls">
+        <!-- Slider adjust screen brightness (first option) -->
+        <label for="brightness">Screen Brightness</label>
+        <input type="range" id="brightness" min="50" max="100" aria-label="Adjust screen brightness">
+        <br><br>
+        <!-- Checkbox to toggle background music -->
+        <label>
+            <input type="checkbox" id="musicToggle" aria-label="Toggle background music">
+            Play Background Music
+        </label>
+        <br><br>
+        <!-- Checkbox to toggle dark mode -->
+        <label>
+            <input type="checkbox" id="darkModeToggle" aria-label="Toggle dark mode">
+            Enable Dark Mode
+        </label>
+        <br><br>
+        <!-- Button to return to home page with fade effect -->
+        <button onclick="fadeToPage('index.html')" aria-label="Return to Home page">Back to Home</button>
+    </main>
+
+
+
+    <!-- background music -->
+    <audio id="bgMusic" src="sound/creepy_loop.mp3" loop preload="auto"></audio>
+
+    <!-- button Sound -->
+    <audio id="creakSound" src="sound/creaky_door.mp3" preload="auto"></audio>
+
+    <!--  JavaScript for transitions and settings -->
+    <script src="scripts.js"></script>
+
 </body>
 </html>

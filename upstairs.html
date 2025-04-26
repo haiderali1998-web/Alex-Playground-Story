@@ -1,40 +1,60 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <!-- Browser Tab -->
-        <title>Alex's Playground Story - Page 6</title>
-    </head>
-    <body>
-        <!-- Main Header -->
-        <h1>Alex's Playground Story</h1>
+<head>
+    <!-- Browser Tab -->
+    <title>Alex's Playground Story - Page 6</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Main Header -->
+    <h1>Alex's Playground Story</h1>
 
-        <nav>
-            <!-- Navigation -->
-            <a href="index.html">Home</a>
-            <a href="settings.html">Settings</a>
-            <a href="about.html">About Us</a>
-        </nav>
+    <nav>
+        <!-- Navigation -->
+        <a onclick="fadeToPage('loading.html')"
+        <a onclick="fadeToPage('settings.html')">Settings</a>
+        <a onclick="fadeToPage('about.html')">About Us</a>
+        <a onclick="fadeToPage('quiz.html')" aria-label="Go to Quiz page">Quiz</a>
+         <a onclick="fadeToPage('credits.html')" aria-label="Go to Credits page">Credits</a>
+    </nav>
 
     <!-- Story information -->
-    <!-- Introduction to the page of the story -->
-    <p>Alex runs as fast as he can up the stairs of the old house. Upon entering a random room in fear,
+    <p>
+        Alex runs as fast as he can up the stairs of the old house. Upon entering a random room in fear,
         he found a room to be with little signs of life with the dust floating around the room with an old
-        mirror on the floor, balancing against the wall.</p>
-    <p>When Alex investigated it, suddenly his reflection didn't move an inch - it just stared back at him
-        with wide eyes. Suddenly, his reflection grinned and laughed creepily before stepping out of the mirror.</p>
+        mirror on the floor, balancing against the wall.
+    </p>
+    <p>
+        When Alex investigated it, suddenly his reflection didn't move an inch - it just stared back at him
+        with wide eyes. Suddenly, his reflection grinned and laughed creepily before stepping out of the mirror.
+    </p>
     <p>The real Alex was pulled inside the mirror, stuck in the dusty reflection - trapped forever and his fate sealed.</p>
 
     <!-- Giving an option to the user for the next page -->
     <p>A wrong turn sealed your fate. Would you like to go back to replay the story?</p>
 
-    <!-- Next page goes to either upstairs or the basement -->
-    <button onclick="location.href='first_story_page.html'">Yes, I'd like to replay the story.</button>
-    <button onclick="location.href='home.html'">No, take me back home.</button>
+    <!-- Correct buttons using fade transition -->
+    <button onclick="fadeToPage('first_story_page.html')">Yes, I'd like to replay the story.</button>
+    <button onclick="fadeToPage('index.html')">No, take me back home.</button>
 
     <!-- Community and Discussions on the bottom right corner -->
-    <a href="community.html">Community and Discussions</a>
-    
+    <div id="community-box">
+        <a onclick="fadeToPage('community.html')">Community and Discussions</a>
+    </div>
+
     <!-- The footer -->
-    <p>&copy; 2025 Alex's Playground Story</p>
+    <footer>
+        <p>&copy; 2025 Alex's Playground Story</p>
+    </footer>
+
+    <!-- Background Music -->
+    <audio id="bgMusic" src="sound/creepy_loop.mp3" loop preload="auto"></audio>
+
+    <!-- Button Creak Sound -->
+    <audio id="creakSound" src="sound/creaky_door.mp3" preload="auto"></audio>
+
+    <!-- Shared JavaScript -->
+    <script src="scripts.js"></script>
+
 </body>
 </html>

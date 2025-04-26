@@ -330,4 +330,104 @@ audio {
     padding: 15px;
     max-width: 95vw;
   }
+
+
+ 
+
+
+
+
+
+    /* Loading Page Styles */
+    .loading-page {
+        background-color: black;
+        color: white;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding-top: 20%;
+        font-size: 2em;
+    }
+
+    /* Spinner Animation */
+    .spinner {
+        margin-top: 20px;
+        border: 8px solid #f3f3f3;
+        border-top: 8px solid red;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        animation: spin 1s linear infinite;
+        display: inline-block;
+    }
+
+    /* Rotate Animation */
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+
+
+    /* Credits Page Styles */
+    .credits-page {
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding: 50px;
+    }
+
+        .credits-page h1, .credits-page h2 {
+            color: red;
+            margin-bottom: 20px;
+        }
+
+        .credits-page p {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+
+    /* Quiz Page Styles */
+    .quiz-page {
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding: 30px;
+    }
+
+        .quiz-page p {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .quiz-page label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+
+    /* Page 4 Styles */
+    .page-4 {
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding: 30px;
+    }
+
+        .page-4 p {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+
+        .page-4 button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 1em;
+        }
+
 }
