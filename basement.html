@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Link to styles.css for styling -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Browser Tab -->
+    <title>Alex's Playground Story - Page 11</title>
+</head>
+<body class="green-portal-page">
+
+    <!-- Main Header -->
+    <h1>Alex's Playground Story</h1>
+
+    <nav>
+        <!-- Navigation -->
+        <a onclick="fadeToPage('loading.html')">Home</a>
+        <a onclick="fadeToPage('settings.html')">Settings</a>
+        <a onclick="fadeToPage('about.html')">About Us</a>
+        <a onclick="fadeToPage('quiz.html')" aria-label="Go to Quiz page">Quiz</a>
+        <a onclick="fadeToPage('credits.html')" aria-label="Go to Credits page">Credits</a>
+    </nav>
+
+    <!-- Story information -->
+    <p>
+        Upon entering the basement, the air was damp and cold. Alex treaded through the basement 
+		further to find an ancient-looking book with strange symbols he couldn’t figure out. As he 
+		flipped through the pages, a portal opened in front of him. 
+    </p>
+    <p>
+        It glowed purple on one side and green on the other, they glowed with intense aura and curiosity as 
+		Alex dropped the book in shock, causing it to disappear in thin ashes.   
+    </p>
+    <p>
+    
+    <!-- Giving an option to the user for the next page -->
+    <p>Your path has come to a bitter end. Would you like to go back to replay the story?</p>
+
+    <!-- Correct buttons using fade transition -->
+    <button onclick="fadeToPage('green_portal.html')">Alex picks the purple portal.</button>
+    <button onclick="fadeToPage('purple_portal.html')">NAlex picks the green portal.</button>
+
+    <!-- Community and Discussions on the bottom right corner -->
+    <div id="community-box">
+        <a onclick="fadeToPage('community.html')">Community and Discussions</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Alex's Playground Story. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Background Music -->
+    <audio id="bgMusic" src="sound/creepy_loop.mp3" loop preload="auto"></audio>
+
+    <!-- Button Creak Sound -->
+    <audio id="creakSound" src="sound/creaky_door.mp3" preload="auto"></audio>
+
+    <!-- Shared JavaScript -->
+    <script src="scripts.js"></script>
+
+</body>
+</html>
