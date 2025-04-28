@@ -1,6 +1,80 @@
 /* Import Special Elite font from Google Fonts for spooky yet legible typography */
 @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 
+/* Backgrounds for each page */
+
+/* Home page */
+body.home-page::before {
+    background-image: url('Background_Images/GAME_COVER.png');
+}
+
+/* First Story page */
+body.first-story-page::before {
+    background-image: url('Background_Images/PLAYGROUND.png');
+}
+
+/* Swing page */
+body.swing-page::before {
+    background-image: url('Background_Images/PLAYGROUND.png');
+}
+
+/* Slide page */
+body.slide-page::before {
+    background-image: url('Background_Images/INSIDE_SLIDE.png');
+}
+
+/* Basement page */
+body.green-portal-page::before {
+    background-image: url('Background_Images/BASEMENT_DEMON.png');
+}
+
+/* Upstairs page */
+body.upstairs-page::before {
+    background-image: url('Background_Images/HAUNTED_HOUSE_STAIRS.png');
+}
+
+/* Green Portal page */
+body.green-portal-page::before {
+    background-image: url('Background_Images/HAUNTED_HOUSE_HALLWAY.png');
+}
+
+/* Purple Portal page */
+body.purple-portal-page::before {
+    background-image: url('Background_Images/PURPLE_PORTAL.png');
+}
+
+/* Shadow Figure page */
+body.first-story-page::before {
+    background-image: url('Background_Images/HAUNTED_HOUSE_EXTERIOR.png');
+}
+
+/* Dark Void page */
+body.page-4::before {
+    background-image: url('Background_Images/BASEMENT_FOOD.png');
+}
+
+/* Community, Settings, Quiz, and Credits pages */
+body.community-page::before,
+body.settings-page::before,
+body.quiz-page::before,
+body.credits-page::before {
+    background-image: url('Background_Images/GAME_COVER_2.png');
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Base styles for body */
 body {
   background: linear-gradient(135deg, #1c2526 0%, #2a3a3d 100%);
