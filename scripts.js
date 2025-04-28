@@ -1,6 +1,5 @@
 ﻿// --- Armaan's Improvements (April 2025) ---
 // Music toggle, music volume control, button creak sound
-// Completed by Armaan during group project finalisation for Alex's Playground Story
 // ---------------------------------------------------------
 
 /* Handle page transitions with fade-out effect */
