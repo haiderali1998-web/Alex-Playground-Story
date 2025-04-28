@@ -448,7 +448,7 @@ body::before {
 /* Backgrounds for each page */
 
 /* Home page */
-body.index-page::before {
+body.home-page::before {
     background-image: url('Background_Images/GAME_COVER.png');
 }
 
@@ -468,7 +468,7 @@ body.slide-page::before {
 }
 
 /* Basement page */
-body.basement-page::before {
+body.green-portal-page::before {
     background-image: url('Background_Images/BASEMENT_DEMON.png');
 }
 
@@ -488,12 +488,12 @@ body.purple-portal-page::before {
 }
 
 /* Shadow Figure page */
-body.shadow-figure-page::before {
+body.first-story-page::before {
     background-image: url('Background_Images/HAUNTED_HOUSE_EXTERIOR.png');
 }
 
 /* Dark Void page */
-body.dark-void-page::before {
+body.page-4::before {
     background-image: url('Background_Images/BASEMENT_FOOD.png');
 }
 
