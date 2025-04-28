@@ -1,4 +1,9 @@
-﻿/* Handle page transitions with fade-out effect */
+﻿// --- Armaan's Improvements (April 2025) ---
+// Music toggle, music volume control, button creak sound
+// Completed by Armaan during group project finalisation for Alex's Playground Story
+// ---------------------------------------------------------
+
+/* Handle page transitions with fade-out effect */
 function fadeToPage(url) {
     document.body.classList.add('fading-out');
     setTimeout(() => {
@@ -11,10 +16,10 @@ window.addEventListener('load', () => {
     document.body.classList.remove('fading-out');
     document.body.style.opacity = '1';
     document.body.style.animation = 'fadeIn 1s ease-in';
-    applySettings(); // Apply saved settings on page load
+    applySettings(); // Apply all saved settings on page load
 });
 
-/* Apply settings (brightness, dark mode, background music, volume) */
+/* Apply settings (brightness, dark mode, music toggle, volume) */
 function applySettings() {
     // Brightness
     const brightness = localStorage.getItem('brightness') || 100;
@@ -34,27 +39,23 @@ function applySettings() {
         darkModeToggle.checked = darkMode;
     }
 
-    // BG Music - Done by Armaan
+    /* === Background Music Settings (Armaan's Feature) === */
     const bgMusic = document.getElementById('bgMusic');
     const musicToggle = document.getElementById('musicToggle');
+    const savedVolume = localStorage.getItem('musicVolume');
     const musicEnabled = localStorage.getItem('musicEnabled') === 'true';
 
     if (bgMusic) {
-        const savedVolume = localStorage.getItem('musicVolume') || 40;
-        const volume = savedVolume / 100;
-        bgMusic.volume = volume;
-
+        bgMusic.volume = savedVolume !== null ? parseFloat(savedVolume) : 0.4;
         if (musicEnabled) {
             bgMusic.muted = false;
             bgMusic.play().catch((error) => {
-                console.log("Autoplay prevented by browser. Waiting for user click...");
                 document.body.addEventListener('click', () => {
                     bgMusic.play().catch((e) => console.log('Still blocked:', e));
                 }, { once: true });
             });
         } else {
             bgMusic.pause();
-            bgMusic.currentTime = 0;
         }
     }
 
@@ -62,15 +63,14 @@ function applySettings() {
         musicToggle.checked = musicEnabled;
     }
 
-    // Set vol slider to match saved volume - Armaan
+    // Set Volume Slider on page load
     const volumeSlider = document.getElementById('volume');
-    if (volumeSlider) {
-        const savedVolume = localStorage.getItem('musicVolume') || 40;
-        volumeSlider.value = savedVolume;
+    if (volumeSlider && savedVolume !== null) {
+        volumeSlider.value = savedVolume * 100;
     }
 }
 
-/*  settings controls */
+/* Initialize settings controls */
 document.addEventListener('DOMContentLoaded', () => {
     const brightnessSlider = document.getElementById('brightness');
     const darkModeToggle = document.getElementById('darkModeToggle');
@@ -79,6 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const bgMusic = document.getElementById('bgMusic');
     const creakSound = document.getElementById('creakSound');
 
+    // Brightness control
     if (brightnessSlider) {
         brightnessSlider.addEventListener('input', () => {
             const value = brightnessSlider.value;
@@ -87,6 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Dark Mode toggle
     if (darkModeToggle) {
         darkModeToggle.addEventListener('change', () => {
             const isDarkMode = darkModeToggle.checked;
@@ -95,6 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    /* === Music Toggle and Volume Control === */
     if (musicToggle && bgMusic) {
         musicToggle.addEventListener('change', () => {
             const enabled = musicToggle.checked;
@@ -102,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (enabled) {
                 bgMusic.currentTime = 0;
                 bgMusic.play().catch((e) => {
-                    console.log("Play blocked:", e);
+                    console.log("Music play blocked:", e);
                 });
             } else {
                 bgMusic.pause();
@@ -112,13 +115,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (volumeSlider && bgMusic) {
         volumeSlider.addEventListener('input', () => {
-            const value = volumeSlider.value;
-            const volume = value / 100;
+            const volume = volumeSlider.value / 100;
             bgMusic.volume = volume;
-            localStorage.setItem('musicVolume', value);
+            localStorage.setItem('musicVolume', volume);
         });
     }
 
+    // Button click creak sound
     if (creakSound) {
         const buttons = document.querySelectorAll('button');
         buttons.forEach((btn) => {
@@ -131,3 +134,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
