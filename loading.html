@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,11 +6,21 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="loading-page">
-    <h1>Loading...</h1>
-    <div class="spinner"></div>
+
+    <!-- Image  -->
+    <img src="Background_Images/loading.webp" alt="Loading Background" class="loading-background">
+
+    <!--  Music -->
+    <audio id="bgMusic" src="sound/creepy_loop.mp3" loop preload="auto"></audio>
+
+    <!-- Button Sound -->
+    <audio id="creakSound" src="sound/creaky_door.mp3" preload="auto"></audio>
+
+    <!-- Shared JavaScript -->
+    <script src="scripts.js"></script>
 
     <script>
-        // After 3 seconds, go to home page
+        // After 3 seconds go to home page
         setTimeout(function () {
             window.location.href = "index.html";
         }, 3000);
