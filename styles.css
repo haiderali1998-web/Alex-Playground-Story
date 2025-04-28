@@ -422,4 +422,87 @@ audio {
             font-size: 1em;
         }
 
+
+  /* Base body styling and fade in */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    opacity: 1;
+    animation: fadeIn 1s ease-in;
+}
+
+/* Fade animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Backgrounds for each page */
+
+/* Home page */
+body.index-page::before {
+    background-image: url('Background_Images/GAME_COVER.png');
+}
+
+/* First Story page */
+body.first-story-page::before {
+    background-image: url('Background_Images/PLAYGROUND.png');
+}
+
+/* Swing page */
+body.swing-page::before {
+    background-image: url('Background_Images/PLAYGROUND.png');
+}
+
+/* Slide page */
+body.slide-page::before {
+    background-image: url('Background_Images/INSIDE_SLIDE.png');
+}
+
+/* Basement page */
+body.basement-page::before {
+    background-image: url('Background_Images/BASEMENT_DEMON.png');
+}
+
+/* Upstairs page */
+body.upstairs-page::before {
+    background-image: url('Background_Images/HAUNTED_HOUSE_STAIRS.png');
+}
+
+/* Green Portal page */
+body.green-portal-page::before {
+    background-image: url('Background_Images/HAUNTED_HOUSE_HALLWAY.png');
+}
+
+/* Purple Portal page */
+body.purple-portal-page::before {
+    background-image: url('Background_Images/PURPLE_PORTAL.png');
+}
+
+/* Shadow Figure page */
+body.shadow-figure-page::before {
+    background-image: url('Background_Images/HAUNTED_HOUSE_EXTERIOR.png');
+}
+
+/* Dark Void page */
+body.dark-void-page::before {
+    background-image: url('Background_Images/BASEMENT_FOOD.png');
+}
+
+/* Community, Settings, Quiz, and Credits pages */
+body.community-page::before,
+body.settings-page::before,
+body.quiz-page::before,
+body.credits-page::before {
+    background-image: url('Background_Images/GAME_COVER_2.png');
+}
+
 }
