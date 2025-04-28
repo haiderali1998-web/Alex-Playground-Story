@@ -1,3 +1,5 @@
+/* Import Special Elite font from Google Fonts for spooky yet legible typography */
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 
 /* Base styles for body */
 body {
@@ -334,9 +336,7 @@ audio {
 
 
     /* Armaan */
-
-   
-  /* Loading Page Styles */
+    /* Loading Page Styles */
     .loading-page {
         background-color: black;
         font-family: Arial, sans-serif;
@@ -359,6 +359,9 @@ audio {
         z-index: -1; /* behind anything else */
         opacity: 1; /* full brightness */
     }
+
+
+
 
 
 
@@ -421,25 +424,11 @@ audio {
         }
 
 
-  /* Base body styling and fade in */
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: -1;
-    opacity: 1;
-    animation: fadeIn 1s ease-in;
+
+
 }
 
-/* Fade animations */
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
+
+
+
 
