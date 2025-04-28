@@ -14,7 +14,7 @@ window.addEventListener('load', () => {
     applySettings(); // Apply saved settings on page load
 });
 
-/* Apply settings (brightness, dark mode, background music) */
+/* Apply settings (brightness, dark mode, background music, volume) */
 function applySettings() {
     // Brightness
     const brightness = localStorage.getItem('brightness') || 100;
@@ -34,17 +34,18 @@ function applySettings() {
         darkModeToggle.checked = darkMode;
     }
 
-    // Background Music
+    // BG Music - Done by Armaan
     const bgMusic = document.getElementById('bgMusic');
     const musicToggle = document.getElementById('musicToggle');
     const musicEnabled = localStorage.getItem('musicEnabled') === 'true';
 
     if (bgMusic) {
-        if (musicEnabled) {
-            bgMusic.volume = 0.4;
-            bgMusic.muted = false;
+        const savedVolume = localStorage.getItem('musicVolume') || 40;
+        const volume = savedVolume / 100;
+        bgMusic.volume = volume;
 
-            // Try to play music even if browser blocks it at first
+        if (musicEnabled) {
+            bgMusic.muted = false;
             bgMusic.play().catch((error) => {
                 console.log("Autoplay prevented by browser. Waiting for user click...");
                 document.body.addEventListener('click', () => {
@@ -60,13 +61,21 @@ function applySettings() {
     if (musicToggle) {
         musicToggle.checked = musicEnabled;
     }
+
+    // Set vol slider to match saved volume - Armaan
+    const volumeSlider = document.getElementById('volume');
+    if (volumeSlider) {
+        const savedVolume = localStorage.getItem('musicVolume') || 40;
+        volumeSlider.value = savedVolume;
+    }
 }
 
-/* Initialize settings controls */
+/*  settings controls */
 document.addEventListener('DOMContentLoaded', () => {
     const brightnessSlider = document.getElementById('brightness');
     const darkModeToggle = document.getElementById('darkModeToggle');
     const musicToggle = document.getElementById('musicToggle');
+    const volumeSlider = document.getElementById('volume');
     const bgMusic = document.getElementById('bgMusic');
     const creakSound = document.getElementById('creakSound');
 
@@ -92,13 +101,21 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem('musicEnabled', enabled);
             if (enabled) {
                 bgMusic.currentTime = 0;
-                bgMusic.volume = 0.4;
                 bgMusic.play().catch((e) => {
                     console.log("Play blocked:", e);
                 });
             } else {
                 bgMusic.pause();
             }
+        });
+    }
+
+    if (volumeSlider && bgMusic) {
+        volumeSlider.addEventListener('input', () => {
+            const value = volumeSlider.value;
+            const volume = value / 100;
+            bgMusic.volume = volume;
+            localStorage.setItem('musicVolume', value);
         });
     }
 

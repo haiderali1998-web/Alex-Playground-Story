@@ -2,14 +2,13 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="styles.css">
-     <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <title>Settings</title>
-
 </head>
 
 <body class="settings-page">
     <header>
-        <!--  heading for settings page -->
+        <!-- heading for settings page -->
         <h1>Settings</h1>
         <div class="nav-links">
             <!-- Navigation links with fade transition effect -->
@@ -20,28 +19,35 @@
             <a onclick="fadeToPage('credits.html')" aria-label="Go to Credits page">Credits</a>
         </div>
     </header>
+
     <main class="settings-controls">
-        <!-- Slider adjust screen brightness (first option) -->
+        <!-- Slider to adjust screen brightness (first option) -->
         <label for="brightness">Screen Brightness</label>
         <input type="range" id="brightness" min="50" max="100" aria-label="Adjust screen brightness">
         <br><br>
+
+        <!-- Slider to adjust background music volume -->
+        <label for="volume">Music Volume</label>
+        <input type="range" id="volume" min="0" max="100" aria-label="Adjust music volume">
+        <br><br>
+
         <!-- Checkbox to toggle background music -->
         <label>
             <input type="checkbox" id="musicToggle" aria-label="Toggle background music">
             Play Background Music
         </label>
         <br><br>
+
         <!-- Checkbox to toggle dark mode -->
         <label>
             <input type="checkbox" id="darkModeToggle" aria-label="Toggle dark mode">
             Enable Dark Mode
         </label>
         <br><br>
+
         <!-- Button to return to home page with fade effect -->
         <button onclick="fadeToPage('index.html')" aria-label="Return to Home page">Back to Home</button>
     </main>
-
-
 
     <!-- background music -->
     <audio id="bgMusic" src="sound/creepy_loop.mp3" loop preload="auto"></audio>
@@ -49,8 +55,9 @@
     <!-- button Sound -->
     <audio id="creakSound" src="sound/creaky_door.mp3" preload="auto"></audio>
 
-    <!--  JavaScript for transitions and settings -->
+    <!-- JavaScript for transitions and settings -->
     <script src="scripts.js"></script>
 
 </body>
 </html>
+

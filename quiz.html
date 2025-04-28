@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿<!-- Armaan -->
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -56,23 +57,23 @@
 
     <!-- Quiz Logic -->
     <script>
-    function submitQuiz() {
-      let score = 0;
+        function submitQuiz() {
+            let score = 0;
 
-      const answers = {
-        q1: 'b',
-        q2: 'b',
-        q3: 'a'
-      };
+            const answers = {
+                q1: 'b',
+                q2: 'b',
+                q3: 'a'
+            };
 
-      const form = document.forms['quizForm'];
+            const form = document.forms['quizForm'];
 
-      if (form['q1'].value === answers.q1) score++;
-      if (form['q2'].value === answers.q2) score++;
-      if (form['q3'].value === answers.q3) score++;
+            if (form['q1'].value === answers.q1) score++;
+            if (form['q2'].value === answers.q2) score++;
+            if (form['q3'].value === answers.q3) score++;
 
-      document.getElementById('quizResult').innerText = `You got ${score} out of 3 correct!`;
-    }
+            document.getElementById('quizResult').innerText = `You got ${score} out of 3 correct!`;
+        }
     </script>
 
 </body>
